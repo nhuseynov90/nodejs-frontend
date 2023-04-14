@@ -4,7 +4,8 @@ services:
     build: 
       context: .
       dockerfile: Dockerfile.dev
-      image: nodefront:latest 
+    image: nodefront:latest 
+    container_name: front1
     ports: 
       - "80:3000"
     volumes:
