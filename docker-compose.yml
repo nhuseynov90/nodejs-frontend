@@ -11,3 +11,13 @@ services:
     volumes:
       - /app/node_modules
       - .:/app
+  tests:
+    build: 
+      context: .
+      dockerfile: Dockerfile.dev
+    image: nodefront:latest 
+    container_name: testfront
+    volumes:
+      - /app/node_modules
+      - .:/app
+    command: ["npm", "run", "test"]
